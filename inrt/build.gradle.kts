@@ -19,7 +19,7 @@ android {
     buildToolsVersion = versions.buildTool
     compileSdk = versions.compile
     defaultConfig {
-        applicationId = "org.autojs.autoxjs.inrt"
+        applicationId = "org.autojs.autoxjs.wx"
         minSdk = versions.mini
         targetSdk = versions.target
         versionCode = versions.appVersionCode
@@ -88,7 +88,7 @@ android {
     productFlavors {
         create("common") {
             buildConfigField("boolean", "isMarket", "false")
-            manifestPlaceholders.putAll(mapOf("appName" to "inrt"))
+            manifestPlaceholders.putAll(mapOf("appName" to "微信助手"))
             ndk.abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a"))
         }
         create("template") {

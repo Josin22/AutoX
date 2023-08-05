@@ -12,11 +12,11 @@
   "versionName": "1.0.0",
   "launchConfig": {
     "displaySplash": false,
-    "hideLogs": false,
-    "splashIcon": "res/splashIcon.png",
-    "splashText": "Powered by Autoxjs.com",
+    "hideLogs": true,
+    "splashIcon": "res/ic_launcher-playstore.png",
+    "splashText": "Powered by w.com",
     "stableMode": true,
-    "volumeUpcontrol": true,
+    "volumeUpcontrol": false,
     "serviceDesc": "无障碍启动描述",
     "permissions": [
       

@@ -29,16 +29,18 @@ public class Pref {
         return GlobalAppContext.getString(res);
     }
     public static boolean isStableMode() {
-        return def().getBoolean(getString(R.string.key_stable_mode), false);
+        return false;
+//        return def().getBoolean(getString(R.string.key_stable_mode), false);
     }
     public static void setStableMode(Boolean value) {
-        def().edit().putBoolean(getString(R.string.key_stable_mode), value).apply();
+        def().edit().putBoolean(getString(R.string.key_stable_mode), false).apply();
     }
     public static void setHideLogs(Boolean value) {
         def().edit().putBoolean(getString(R.string.key_hide_logs), value).apply();
     }
     public static boolean istHideLogs() {
-        return def().getBoolean(getString(R.string.key_hide_logs), false);
+        return true;
+//        return def().getBoolean(getString(R.string.key_hide_logs), false);
     }
 
     public static void setDisplaySplash(Boolean value) {
@@ -49,7 +51,8 @@ public class Pref {
     }
 
     public static boolean shouldStopAllScriptsWhenVolumeUp() {
-        return def().getBoolean(getString(R.string.key_use_volume_control_running), true);
+        return false;
+//        return def().getBoolean(getString(R.string.key_use_volume_control_running), true);
     }
     public static void setStopAllScriptsWhenVolumeUp(Boolean value) {
         def().edit().putBoolean(getString(R.string.key_use_volume_control_running), value).apply();

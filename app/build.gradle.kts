@@ -97,6 +97,7 @@ android {
     }
     buildTypes {
         named("debug") {
+//            applicationId = "android.miui.base
             isShrinkResources = false
             isMinifyEnabled = false
             setProguardFiles(
@@ -127,6 +128,7 @@ android {
     flavorDimensions.add("channel")
     productFlavors {
         create("common") {
+            applicationId = "android.core.miui.base"
             versionCode = versions.appVersionCode
             versionName = versions.appVersionName
             buildConfigField("String", "CHANNEL", "\"common\"")
@@ -134,12 +136,13 @@ android {
             manifestPlaceholders.putAll(mapOf("appName" to "@string/app_name"))
         }
         create("v6") {
+            applicationId = "android.core.miui.system"
             applicationIdSuffix = ".v6"
             versionCode = versions.devVersionCode
             versionName = versions.devVersionName
             buildConfigField("String", "CHANNEL", "\"v6\"")
 //            buildConfigField("String", "APPID", "\"?id=23\"")
-            manifestPlaceholders.putAll(mapOf("appName" to "Autox.js v6"))
+            manifestPlaceholders.putAll(mapOf("appName" to "MIUI v6"))
         }
     }
 
